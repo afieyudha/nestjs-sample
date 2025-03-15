@@ -32,24 +32,24 @@ Additional config :
 
 ## Clone this repository
 ```bash
-$ git clone https://github.com/afieyudha/nestjs-sample.git
+git clone https://github.com/afieyudha/nestjs-sample.git
 ```
 
 ## Project setup install nest js
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Connect database Mysql
 ```bash
-$ CREATE DATABASE nestjs_sample;
+CREATE DATABASE nestjs_sample;
 ```
 
 ## Run project
 
 ```bash
-$ npm run start:dev
+npm run start:dev
 ```
 
 ## API test - Test API with Postman
