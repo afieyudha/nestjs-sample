@@ -23,76 +23,74 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is project Nest Js Sample with Fake API from https://jsonplaceholder.typicode.com/
 
-## Project setup
+Additional config :
+1. Caching with Redis
+2. Clean Code
+3. Architectural Pattern
+
+## Clone this repository
+```bash
+$ git clone https://github.com/afieyudha/nestjs-sample.git
+```
+
+## Project setup install nest js
 
 ```bash
 $ npm install
 ```
 
-## Compile and run the project
+## Connect database Mysql
+```bash
+$ CREATE DATABASE nestjs_sample;
+```
+
+## Run project
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Run tests
+## API test - Test API with Postman
 
+#GET /posts - Get all posts
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+localhost:3000/posts
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
+#GET /posts/1 - Get post by ID => id 1
 ```bash
-$ npm install -g mau
-$ mau deploy
+localhost:3000/posts/1
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+#POST /posts - Add new post
+add this endpoint to body parameter
+```bash
+{
+    "id": 100,
+    "title": "add nest js sample",
+    "body": "add nest js sample body,
+    "userId": 1
+}
+```
+#PUT /posts/100 - Update post 
+add this endpoint to body parameter
+```bash
+{
+  "title": "Updated Post",
+  "body": "This is an updated post"
+}
+```
+#PATCH /posts/100 - Update post parsial
+add this endpoint to body parameter
+```bash
+{
+  "title": "Patched Title"
+}
+```
+#DELETE /posts/1 - Delete post 
+```bash
+localhost:3000/posts/1
+```
 
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
